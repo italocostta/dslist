@@ -114,16 +114,17 @@ public class Game {
         this.longDescription = longDescription;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Game game = (Game) o;
-        return id == game.id && Objects.equals(title, game.title) && Objects.equals(year, game.year) && Objects.equals(genre, game.genre) && Objects.equals(platforms, game.platforms) && Objects.equals(imgUrl, game.imgUrl) && Objects.equals(shortDescription, game.shortDescription) && Objects.equals(longDescription, game.longDescription);
+        return id == game.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, year, genre, platforms, imgUrl, shortDescription, longDescription);
+        return Objects.hash(id);
     }
 }
